@@ -34,6 +34,13 @@
   become: true
   become_user: root
   tasks:
+    - name: Add nodejs apt key
+      apt_key:
+        url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+        state: present
+    - name: Add nodejs 14.x ppa for apt repo
+      apt_repository:
+        repo: deb https://deb.nodesource.com/node_14.x bionic main
     - name: Install nodejs
       apt:
         update_cache: yes
