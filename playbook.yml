@@ -29,7 +29,7 @@
         state: present
         update_cache: yes
 - name: Install node.js, npm and python
-  hosts: chatserver
+  hosts: myhost
   remote_user: ubuntu
   become: true
   become_user: root
@@ -55,7 +55,7 @@
         name: python3-dev
         state: present
 - name: Configure server
-  hosts: chatserver
+  hosts: myhost
   remote_user: ubuntu
   become: true
   become_user: root
