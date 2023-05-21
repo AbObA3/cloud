@@ -38,7 +38,7 @@
       apt:
         update_cache: yes
         name: nodejs
-        state: present
+        state: latest
     - name: Install npm
       apt:
         update_cache: yes
